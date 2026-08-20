@@ -1,0 +1,2003 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crowdsourced genealogies</title>
+<meta name="description" content="Crowdsourced genealogies, v1.0: 9,426,965 anonymized individual profiles for Europe and 7,806,906 for the United States and Canada (16,629,078 unique), 1400–2018, with dates, places, family links, fertility, migration and historical urban status. Documentation and download.">
+<link rel="canonical" href="https://crowdsourced.guillaumeblanc.com/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crowdsourced.guillaumeblanc.com/">
+<meta property="og:title" content="Crowdsourced genealogies">
+<meta property="og:description" content="16,629,078 unique anonymized genealogical profiles for Europe, the United States, and Canada, 1400–2018. Documentation and download, v1.0.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23faf3e3"/><path d="M10 40 Q17 26 24 40 Q31 26 38 40 Q45 26 52 40" fill="none" stroke="%23e8511e" stroke-width="6" stroke-linecap="round"/></svg>'>
+<style>
+/*light */
+.markdown-body {
+  color-scheme: light;
+  /** CSS default easing. Use for hover state changes and micro-interactions. */
+  /** Accelerating motion. Use for elements exiting the viewport (moving off-screen). */
+  /** Smooth acceleration and deceleration. Use for elements moving or morphing within the viewport. */
+  /** Decelerating motion. Use for elements entering the viewport or appearing on screen. */
+  /** Constant motion with no acceleration. Use for continuous animations like progress bars or loaders. */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  font-weight: 400;
+  color: #1f2328;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  text-decoration: underline;
+  text-underline-offset: .2rem;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: rgba(0,0,0,0);
+  color: #0969da;
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid #d1d9e0b3;
+}
+
+.markdown-body mark {
+  background-color: #fff8c5;
+  color: #1f2328;
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 2.5rem;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: rgba(0,0,0,0);
+  border-bottom: 1px solid #d1d9e0b3;
+  height: .25em;
+  padding: 0;
+  margin: 1.5rem 0;
+  background-color: #d1d9e0;
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: #59636e;
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  font-variant: tabular-nums;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--borderColor-accent-emphasis);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px rgba(0,0,0,0);
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--borderColor-accent-emphasis);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 0.25rem;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  line-height: 10px;
+  color: #1f2328;
+  vertical-align: middle;
+  background-color: #f6f8fa;
+  border: solid 1px var(--borderColor-muted);
+  border-bottom-color: var(--borderColor-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--borderColor-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #d1d9e0b3;
+}
+
+.markdown-body h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: 600;
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: 600;
+  font-size: .85em;
+  color: #59636e;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #59636e;
+  border-left: .25em solid #d1d9e0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: #d1242f;
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 0.25rem;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1f2328;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 1rem;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #d1d9e0;
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #d1d9e0b3;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body table img {
+  background-color: rgba(0,0,0,0);
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: rgba(0,0,0,0);
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid #d1d9e0;
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: #1f2328;
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: #818b981f;
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: rgba(0,0,0,0);
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 1rem;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 1rem;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: #1f2328;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: rgba(0,0,0,0);
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 0.5rem 9px;
+  text-align: right;
+  background: #ffffff;
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: 600;
+  background: #f6f8fa;
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: #59636e;
+  border-top: 1px solid #d1d9e0;
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 1rem;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: calc(0.5rem*-1);
+  right: calc(0.5rem*-1);
+  bottom: calc(0.5rem*-1);
+  left: calc(1.5rem*-1);
+  pointer-events: none;
+  content: "";
+  border: 2px solid #0969da;
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: #1f2328;
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: #59636e;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0550ae;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6639ba;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: #1f2328;
+}
+
+.markdown-body .pl-ent {
+  color: #0550ae;
+}
+
+.markdown-body .pl-k {
+  color: #cf222e;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: #0a3069;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: #953800;
+}
+
+.markdown-body .pl-bu {
+  color: #82071e;
+}
+
+.markdown-body .pl-ii {
+  color: var(--fgColor-danger);
+  background-color: var(--bgColor-danger-muted);
+}
+
+.markdown-body .pl-c2 {
+  color: #f6f8fa;
+  background-color: #cf222e;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: #116329;
+}
+
+.markdown-body .pl-ml {
+  color: #3b2300;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: #0550ae;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #1f2328;
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: #1f2328;
+}
+
+.markdown-body .pl-md {
+  color: #82071e;
+  background-color: #ffebe9;
+}
+
+.markdown-body .pl-mi1 {
+  color: #116329;
+  background-color: #dafbe1;
+}
+
+.markdown-body .pl-mc {
+  color: #953800;
+  background-color: #ffd8b5;
+}
+
+.markdown-body .pl-mi2 {
+  color: #d1d9e0;
+  background-color: #0550ae;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: #8250df;
+}
+
+.markdown-body .pl-ba {
+  color: #59636e;
+}
+
+.markdown-body .pl-sg {
+  color: #818b98;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #0a3069;
+}
+
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible),
+.markdown-body button:focus:not(:focus-visible),
+.markdown-body summary:focus:not(:focus-visible),
+.markdown-body a:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.markdown-body [tabindex="0"]:focus:not(:focus-visible),
+.markdown-body details-dialog:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body a:has(>p,>div,>pre,>blockquote) {
+  display: block;
+}
+
+.markdown-body a:has(>p,>div,>pre,>blockquote):not(:has(.snippet-clipboard-content,>pre)) {
+  width: fit-content;
+}
+
+.markdown-body a:has(>p,>div,>pre,>blockquote):has(.snippet-clipboard-content,>pre):focus-visible {
+  outline: 2px solid var(--borderColor-accent-emphasis);
+  outline-offset: 2px;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: 400;
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 0.25rem;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body ul:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body ol:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip-path: none;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  color: inherit;
+  border-left: .25em solid #d1d9e0;
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: #0969da;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: #0969da;
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: #8250df;
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: #8250df;
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: #9a6700;
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: #9a6700;
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: #1a7f37;
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: #1a7f37;
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: #cf222e;
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: #d1242f;
+}
+
+.markdown-body>*:first-child>.heading-element:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .highlight pre:has(+.zeroclipboard-container) {
+  min-height: 52px;
+}
+
+
+/* the wrapper GitHub's stylesheet expects — the readme card look */
+body{background:#ffffff;margin:0}
+.markdown-body{box-sizing:border-box;min-width:200px;max-width:980px;margin:0 auto;padding:45px}
+@media (max-width:767px){.markdown-body{padding:15px}}
+</style>
+</head>
+<body>
+<article class="markdown-body">
+<h1>Crowdsourced Genealogy Data: Europe and America</h1>
+<h2>Download the data</h2>
+<p><a href="https://github.com/blanc-g/crowdsourced/releases/download/v1.0/europe.dta.zip"><strong>Download <code>europe.dta.zip</code> (1.37 GB)</strong></a></p>
+<p><a href="https://github.com/blanc-g/crowdsourced/releases/download/v1.0/america.dta.zip"><strong>Download <code>america.dta.zip</code> (1.37 GB)</strong></a></p>
+<p>The release details and SHA-256 checksums are available on the <a href="https://github.com/blanc-g/crowdsourced/releases/tag/v1.0">v1.0 release page</a>.</p>
+<h2>Overview</h2>
+<p>This release accompanies:</p>
+<blockquote>
+<p>Guillaume Blanc (2024), “Demographic transitions, rural flight, and intergenerational persistence: evidence from crowdsourced genealogies,” manuscript dated April 10, 2024.</p>
+</blockquote>
+<p>The release contains two individual-level datasets derived from the public FamiLinx genealogies assembled by Kaplanis et al. (2018) from public Geni.com profiles. The unit of observation is an anonymized individual profile. These are crowdsourced genealogy samples rather than random samples of the historical population. The accompanying paper evaluates the representativeness of the European sample; the United States and Canada sample is provided as a supplementary research file.</p>
+<h2>Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Geographic inclusion rule</th>
+<th style="text-align: right;">Observations</th>
+<th style="text-align: right;">Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>europe.dta</code></td>
+<td>At least one selection event maps to one of the 30 European countries covered</td>
+<td style="text-align: right;">9,426,965</td>
+<td style="text-align: right;">119</td>
+</tr>
+<tr>
+<td><code>america.dta</code></td>
+<td>At least one selection event maps to the United States or Canada</td>
+<td style="text-align: right;">7,806,906</td>
+<td style="text-align: right;">119</td>
+</tr>
+</tbody>
+</table>
+<p>Both files use Stata format 118 (Stata 14 or later) and have identical variable names, storage types, formats, value labels, and variable labels.</p>
+<h2>Geographic Coverage and Sample Selection</h2>
+<p>Selection is based on three events: the individual's birth, the birth of the individual's first linked child, and the individual's death.</p>
+<h3>Europe sample (<code>europe.dta</code>)</h3>
+<p>The Europe sample covers Austria, Belgium, Bulgaria, Croatia, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Lithuania, Luxembourg, North Macedonia, the Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, and the United Kingdom.</p>
+<p>An individual is included in <code>europe.dta</code> when at least one selection event maps to one of these countries. Birth in Europe is not required. For example, an individual born outside Europe who had a first linked child in Europe or died in Europe is included. After inclusion, all retained event fields are preserved, including fields for events outside Europe.</p>
+<p>In the string country variables, North Macedonia and the United Kingdom are recorded as <code>Macedonia</code> and <code>UK</code>.</p>
+<h3>United States and Canada sample (<code>america.dta</code>)</h3>
+<p>This sample covers the United States and Canada. The file name uses “America,” but the geographic coverage does not extend to the rest of the Americas.</p>
+<p>An individual is included in <code>america.dta</code> when at least one selection event maps to the United States or Canada. Birth in either country is not required. For example, an individual born outside the United States and Canada who had a first linked child there or died there is included. After inclusion, all retained event fields are preserved, including fields for events outside the United States and Canada.</p>
+<p>The string country variables record these countries as <code>US</code> and <code>Canada</code>.</p>
+<h3>Overlap between the files</h3>
+<p>The two samples are not mutually exclusive. A profile appears in both files when at least one selection event maps to Europe and at least one maps to the United States or Canada. There are 604,793 such profiles, identified by the same <code>id</code> in both files. Together, the files contain 16,629,078 unique profiles.</p>
+<p>Users who append the files should either remove duplicate <code>id</code> values or retain a file-of-origin indicator, depending on the intended analysis.</p>
+<h2>Data Source and Construction</h2>
+<p>The FamiLinx source is reported to contain 86,124,645 individual profiles plus direct parent-child links. The released datasets were constructed in four stages.</p>
+<h3>Profiles, dates, and plausibility screens</h3>
+<ul>
+<li>Profiles are imported in 2,000,000-row blocks.</li>
+<li>Sex, event years and months, and geographic coordinates are parsed for birth, death, baptism, and burial. Day-level fields, textual date descriptions, circa indicators, and original place-name fields are not retained.</li>
+<li>A missing or invalid month is set to January for constructing the Stata monthly date, while the reported <code>*_m</code> field itself is left missing or invalid. Missing birth components are subsequently filled from baptism components, and missing death components from burial components.</li>
+<li>A profile is removed if any nonmissing birth, death, baptism, or burial year is earlier than 1400 or is 2018 or later. Duplicate profile identifiers are reduced to the first imported record.</li>
+<li>When the necessary monthly dates are available, the individual is removed if lifespan is below 15 or above 125 years, first-child age is below 15, first-child age exceeds 65 for a male or 45 for a female, or the first child is born after the individual's death. The sex-specific upper limit is not applied when sex is missing.</li>
+</ul>
+<h3>Family links and fertility</h3>
+<p><code>fert</code> is the number of retained parent-child link rows for an individual; it is an observed linked-child count, not a verified count of all biological children. Parent-child links for a parent with more than 50 rows are discarded rather than top-coded. If more than two parents are linked to a child, only the first two after numeric-ID ordering enter the parent and co-parent structure. A one-parent record receives a synthetic missing-co-parent placeholder during construction; the released co-parent identifier is missing.</p>
+<p>The variables named <code>spouse</code>, <code>couple_id</code>, and <code>n_spouses</code> are constructed from shared children and should be interpreted as co-parent measures, not verified marriages:</p>
+<ul>
+<li>A candidate couple is a pair of recorded co-parents of at least one linked child.</li>
+<li><code>couple_fert</code> is the number of linked children shared by that exact pair.</li>
+<li><code>spouse</code> is the co-parent in the pair sharing the greatest number of linked children with the individual; an internal record-order tie-break is used when pairs tie.</li>
+<li><code>spouse_fert</code> is that selected co-parent's total retained linked-child count.</li>
+<li><code>n_spouses</code> counts candidate co-parent-pair records and can include a missing-co-parent pair. If it exceeds 10, the individual's derived fertility, co-parent, and child-summary fields are not retained, although the individual profile can remain in the main file.</li>
+</ul>
+<p>First- and last-child years, monthly dates, months, and locations are derived from linked children whose profiles could be matched. Relation counts can therefore be observed even when dated child profiles are not.</p>
+<p>The fertility-sample indicator is constructed from the individual's own linked fertility and a construction-only ancestral measure, <code>fert_bef</code>. The latter is the row mean of the nonmissing linked-child counts in 30 pedigree positions: 2 parents, 4 grandparents, 8 great-grandparents, and 16 great-great-grandparents. Missing positions are ignored, and <code>fert_bef</code> is missing only when fertility is unavailable for all 30 positions. Pedigree collapse can cause the same ancestor to occupy more than one position.</p>
+<p>The indicator is defined only when both the individual's <code>fert</code> and <code>fert_bef</code> are observed:</p>
+<ul>
+<li><code>s_fert</code> is missing when the individual's own <code>fert</code> is missing or all 30 ancestral fertility values are missing.</li>
+<li><code>s_fert==0</code> when own and ancestral fertility are observed but <code>fert_bef&lt;=1</code>.</li>
+<li><code>s_fert==1</code> when own and ancestral fertility are observed and <code>fert_bef&gt;1</code>; this is the analytic fertility sample.</li>
+</ul>
+<p>Every nonmissing linked-child count is an integer of at least one. Consequently, <code>fert_bef&gt;1</code> is equivalent to at least one observed pedigree position having more than one linked child. Likewise, <code>s_fert==0</code> means that every observed pedigree-position count equals one. Missing <code>fert</code> or <code>s_fert</code> must not be interpreted as zero fertility: a profile without a retained linked child is assigned missing <code>fert</code>, not <code>fert=0</code>.</p>
+<p>Observed fertility coverage is:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th style="text-align: right;">Total observations</th>
+<th style="text-align: right;"><code>fert</code> observed</th>
+<th style="text-align: right;"><code>s_fert</code> missing</th>
+<th style="text-align: right;"><code>s_fert==0</code></th>
+<th style="text-align: right;"><code>s_fert==1</code></th>
+<th style="text-align: right;"><code>s_fert</code> nonmissing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>europe.dta</code></td>
+<td style="text-align: right;">9,426,965</td>
+<td style="text-align: right;">2,070,330</td>
+<td style="text-align: right;">8,313,251</td>
+<td style="text-align: right;">353,890</td>
+<td style="text-align: right;">759,824</td>
+<td style="text-align: right;">1,113,714</td>
+</tr>
+<tr>
+<td><code>america.dta</code></td>
+<td style="text-align: right;">7,806,906</td>
+<td style="text-align: right;">1,896,301</td>
+<td style="text-align: right;">6,830,951</td>
+<td style="text-align: right;">250,421</td>
+<td style="text-align: right;">725,534</td>
+<td style="text-align: right;">975,955</td>
+</tr>
+</tbody>
+</table>
+<p>Among profiles with observed own fertility, 956,616 in <code>europe.dta</code> and 920,346 in <code>america.dta</code> have missing <code>s_fert</code> because ancestral fertility is unavailable. Both files retain main-sample profiles regardless of whether <code>s_fert</code> is observed, which is why their total observation counts are much larger than their fertility-sample counts.</p>
+<h3>Geographic mapping and historical urban status</h3>
+<p>European coordinate keys are matched using 2018 LAU geography and 2013 NUTS 3, NUTS 2, and country-level geography. United States coordinate keys are matched to 2019 Census counties and states; Canadian coordinate keys are matched to 2016 census divisions and provinces. These modern units are applied to historical event coordinates. The released <code>*_dep</code>, <code>*_region</code>, and <code>*_country</code> values are dataset-specific integer categories with Stata value labels generated from area names; they are not official geographic codes. For purposes of matching historical city populations, selected region-level consolidations are applied for London, Brussels, Antwerp, Liège, Dublin, and Belfast.</p>
+<p>The broad European groups in <code>*_group</code> are:</p>
+<ul>
+<li><code>France</code>: France.</li>
+<li><code>British_Isles</code>: Ireland and the United Kingdom.</li>
+<li><code>Northern_Europe</code>: Denmark, Estonia, Finland, Iceland, Latvia, Lithuania, Norway, and Sweden.</li>
+<li><code>Southern_Europe</code>: Croatia, Greece, Italy, Macedonia, Portugal, Slovenia, and Spain.</li>
+<li><code>Eastern_Europe</code>: Bulgaria, Czechia, Poland, Romania, and Slovakia.</li>
+<li><code>Central_Low_Countries</code>: Austria, Belgium, Germany, Hungary, Luxembourg, the Netherlands, and Switzerland.</li>
+</ul>
+<p>Historical urban status is based on Bairoch, Batou, and Chèvre (1988) municipality populations for 1500, 1600, 1700, 1750, 1800, and 1850. Population values are expressed in thousands, and a mapped place is urban when population is at least 5 (5,000 inhabitants). Selected missing intermediate populations are geometrically interpolated between surrounding benchmarks. Once a place is observed as urban, a missing status at a later benchmark is carried forward as urban; other missing statuses are coded zero in covered countries. Helsinki is manually added as an urban place in 1850. Urban fields are set missing for Estonia, Iceland, Latvia, Lithuania, and Macedonia, as well as for events outside Europe.</p>
+<p>For all three mapped events, the applicable urban benchmark is selected using the individual's year of birth. Thus <code>first_child_urban</code> describes the first-child location at the parent's birth-year benchmark, and <code>death_urban</code> describes the death location at the deceased person's birth-year benchmark. These are the measures used in the paper to classify origin and destination places relative to urban status at the individual's birth.</p>
+<h3>Derived variables, parents, and weights</h3>
+<p>Great-circle birth-to-death distance is generated in kilometres. Ages at first child, last child, and death are differences between Stata monthly dates divided by 12.</p>
+<p>Parent 1 and parent 2 are ordered by numeric identifier, not by sex. Parent identifiers and linked-child counts can be present even when the parent's own profile is absent from the final individual file. Parent sex, event dates, mapped places, ages, and distance are populated only when that linked parent is also found in the retained intermediate individual sample.</p>
+<p>Event weights use estimated country population in 1820 from the Maddison Project Database 2020. Missing 1820 values are manually supplied for Croatia, Estonia, Iceland, Latvia, Lithuania, Luxembourg, Macedonia, Slovakia, and Slovenia, using the assumptions recorded in the construction. For each European country and event, the weight equals 1820 population in thousands divided by the number of genealogy observations in the event-specific denominator window: <code>[1675,1900)</code> for birth, <code>[1700,1925)</code> for first child, and <code>[1750,1975)</code> for death. Weights are not normalized to a mean of one. The same country-event factor is attached to observations outside its denominator window, so it should normally be used only with the corresponding recommended window.</p>
+<h2>Key Variables</h2>
+<p>Variable names are case-sensitive.</p>
+<h3>Individual and sample variables</h3>
+<ul>
+<li><code>id</code>: anonymized FamiLinx individual identifier.</li>
+<li><code>male</code>: male indicator (1=male, 0=female).</li>
+<li><code>europe</code>: equals one when at least one selection event maps to Europe. It equals one throughout <code>europe.dta</code> and can also equal one in <code>america.dta</code>.</li>
+<li><code>america</code>: equals one when at least one selection event maps to the United States or Canada. It equals one throughout <code>america.dta</code> and can also equal one in <code>europe.dta</code>.</li>
+<li><code>s_main</code>: main-sample indicator. It equals one throughout both released files.</li>
+<li><code>s_fert</code>: fertility-sample indicator. It is missing unless both own and ancestral fertility are observed; <code>s_fert==1</code> identifies the analytic fertility sample. Counts are reported in the construction section above.</li>
+</ul>
+<h3>Fertility and family links</h3>
+<ul>
+<li><code>fert</code>: observed number of retained linked-child rows. Fertility analyses should use observations with <code>s_fert==1</code>.</li>
+<li><code>spouse</code>: identifier of the selected co-parent with whom the individual shares the most linked children.</li>
+<li><code>spouse_fert</code>: observed number of retained linked-child rows of the selected co-parent.</li>
+<li><code>couple_id</code>: identifier for the individual-selected-co-parent pair.</li>
+<li><code>couple_fert</code>: number of linked children shared by that pair.</li>
+<li><code>n_spouses</code>: number of candidate co-parent-pair records before the main co-parent is selected. Values over 10 cause the fertility-family fields, but not necessarily the profile, to be excluded.</li>
+<li><code>fert_parents</code>: mean observed fertility of recorded parents.</li>
+<li><code>s_fert_parents</code>: equals one when at least one linked parent is itself present in the retained individual sample with <code>s_fert==1</code>; it is missing otherwise.</li>
+</ul>
+<p>The fertility sample retains an individual when own fertility is observed, at least one of the 30 preceding-generation pedigree positions has observed fertility, and at least one observed position has more than one linked child. Childless individuals cannot be identified reliably. The measure is completed gross linked fertility; child mortality is under-recorded outside direct vertical lineages.</p>
+<h3>Parent variables</h3>
+<p>Parent 1 and parent 2 are ordered by numeric FamiLinx identifier, not by sex. Use <code>parent1_male</code> and <code>parent2_male</code>; do not interpret parent 1 as the father or parent 2 as the mother.</p>
+<p>For each parent, both files can include:</p>
+<ul>
+<li>Identifier, sex, and observed fertility: <code>parent#_id</code>, <code>parent#_male</code>, and <code>parent#_fert</code>.</li>
+<li>Age at first child, last child, and death: <code>parent#_first_child_age</code>, <code>parent#_last_child_age</code>, and <code>parent#_death_age</code>.</li>
+<li>Birth-to-death distance: <code>parent#_distance</code>.</li>
+<li>Year, monthly date, place identifier, raw coordinate key, country, and Europe indicator for birth, first linked child's birth, and death. These profile characteristics require the parent to be present in the retained intermediate individual sample. The released parent-event fields include Europe indicators only; corresponding parent-event America indicators are not included.</li>
+</ul>
+<h3>Dates and ages</h3>
+<p>For event prefix <code>birth</code>, <code>first_child</code>, <code>last_child</code>, or <code>death</code>:</p>
+<ul>
+<li><code>*_y</code>: event year.</li>
+<li><code>*_m</code>: reported month or a baptism/burial fallback month, where applicable. It can be missing or contain an invalid source code.</li>
+<li><code>*_date</code>: Stata monthly date, formatted <code>%tm</code>. January is substituted when the month available at initial date construction is missing or invalid. Later baptism/burial substitutions do not reliably update this field.</li>
+<li><code>first_child_age</code>, <code>last_child_age</code>, and <code>death_age</code>: monthly-date differences divided by 12.</li>
+</ul>
+<p>The same date-construction caveats apply to parent event fields. The first- and last-child year, month, and date are calculated separately and can refer to different linked children. <code>last_child_m</code> is the minimum reported month among children in the latest observed child-birth year, rather than the maximum. When the chronologically first child's location is missing, the earliest dated linked child with a nonmissing location can be substituted. A first-child location therefore need not correspond exactly to <code>first_child_date</code>.</p>
+<h3>Geography</h3>
+<p>For event prefix <code>birth</code>, <code>first_child</code>, or <code>death</code>:</p>
+<ul>
+<li><code>*_latlon_ID</code>: raw latitude-longitude key constructed from FamiLinx coordinates.</li>
+<li><code>*_id</code>: mapped LAU identifier in Europe or source coordinate-key identifier in the United States/Canada.</li>
+<li><code>*_dep</code>: dataset-specific integer category with value labels for NUTS 3 names in Europe, county names in the United States, or census-division names in Canada; not an official code.</li>
+<li><code>*_region</code>: dataset-specific integer category with value labels for NUTS 2 names in Europe, state names in the United States, or province names in Canada; not an official code.</li>
+<li><code>*_country</code>: dataset-specific integer country category with Stata value labels; not an official country code.</li>
+<li><code>*_COUNTRY</code>: the same country information as a string.</li>
+<li><code>*_group</code>: broad European country group; missing outside Europe.</li>
+<li><code>*_latitude</code>, <code>*_longitude</code>: coordinates of the mapped place. European values are LAU representative points; United States and Canadian values retain the matched source-coordinate points.</li>
+<li><code>*_europe</code>, <code>*_america</code>: event-area indicators. Here, <code>*_america</code> refers specifically to the United States or Canada.</li>
+</ul>
+<p>No other last-child geography fields are included.</p>
+<p>Field availability depends on the location of the event, not on which file contains the individual. A European event can therefore have European group, urban, and weight information even when the individual appears in <code>america.dta</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Event-level fields</th>
+<th>Event in Europe</th>
+<th>Event in United States or Canada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*_id</code>, <code>*_dep</code>, <code>*_region</code>, <code>*_country</code>, <code>*_COUNTRY</code>, coordinates</td>
+<td>Available when mapped</td>
+<td>Available when mapped</td>
+</tr>
+<tr>
+<td><code>*_group</code></td>
+<td>Available</td>
+<td>Missing</td>
+</tr>
+<tr>
+<td><code>*_urban</code></td>
+<td>Available where historical urban data are covered</td>
+<td>Missing</td>
+</tr>
+<tr>
+<td><code>*_weight</code></td>
+<td>Available for mapped European countries</td>
+<td>Missing</td>
+</tr>
+</tbody>
+</table>
+<h3>Urban status, migration, and weights</h3>
+<ul>
+<li><code>birth_urban</code>, <code>first_child_urban</code>, and <code>death_urban</code> indicate that the corresponding mapped European municipality had at least 5,000 inhabitants at the latest available Bairoch benchmark at or before the individual's year of birth, where historical urban data are covered. <code>death_urban</code> therefore describes the death place's urban status at the individual's birth benchmark, not at the year of death.</li>
+<li><code>distance</code> is the great-circle distance in kilometres between mapped birth and death locations, generated with Stata's <code>geodist</code> command.</li>
+<li><code>birth_weight</code>, <code>first_child_weight</code>, and <code>death_weight</code> are reweighting factors for mapped European event countries. The numerator is the country's estimated population in 1820, measured in thousands. The denominator is the number of genealogical observations for that event and country in the corresponding half-open main window: <code>[1675,1900)</code> for birth, <code>[1700,1925)</code> for first child, and <code>[1750,1975)</code> for death. They are missing for United States and Canadian events and are not normalized to a mean of one.</li>
+</ul>
+<p>Use the weight corresponding to the event-time outcome being analyzed.</p>
+<h2>Recommended Analysis Windows</h2>
+<p>For its European analyses, the paper focuses on periods where comparisons with representative sources suggest selection is most limited:</p>
+<ul>
+<li>Urbanization and migration by year of birth: 1675-1900.</li>
+<li>Fertility by year of birth of first child: 1700-1925.</li>
+<li>Longevity by year of death: 1750-1975.</li>
+</ul>
+<p>Both files retain observations outside these windows. These periods are the paper's European analysis windows and have not been separately validated for the United States and Canada sample.</p>
+<h2>Variable Dictionary</h2>
+<p>Both datasets have the following identical 119-variable schema.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Variable</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><code>id</code></td>
+<td>Anonymized FamiLinx individual identifier.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><code>male</code></td>
+<td>Male indicator: 1=male, 0=female; missing if source sex was not identified.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><code>distance</code></td>
+<td>Great-circle distance in kilometres between mapped birth and death locations.</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><code>death_age</code></td>
+<td>Age at death in years, calculated from monthly dates and divided by 12.</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><code>europe</code></td>
+<td>1 if birth, first-child, or death location maps to Europe; missing otherwise. It equals 1 throughout <code>europe.dta</code> and can also equal 1 in <code>america.dta</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><code>america</code></td>
+<td>1 if birth, first-child, or death location maps to the United States or Canada; missing otherwise. It equals 1 throughout <code>america.dta</code> and can also equal 1 in <code>europe.dta</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><code>fert</code></td>
+<td>Number of retained parent-child link rows; use <code>s_fert==1</code> for fertility analysis.</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><code>s_fert</code></td>
+<td>Fertility-sample indicator: missing if own fertility or all ancestral fertility values are missing; 0 if both are observed and every observed ancestral linked-child count equals 1; 1 if both are observed and at least one observed ancestral count exceeds 1.</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>s_main</code></td>
+<td>Main-sample indicator; equals 1 for every observation in both released files.</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><code>spouse</code></td>
+<td>Identifier of the selected co-parent sharing the most linked children with the individual; not a verified spouse.</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td><code>spouse_fert</code></td>
+<td>Retained linked-child count of the selected co-parent.</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>couple_id</code></td>
+<td>Identifier for the individual-selected-co-parent pair.</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><code>couple_fert</code></td>
+<td>Number of linked children shared by the individual and selected co-parent.</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td><code>n_spouses</code></td>
+<td>Number of candidate co-parent-pair records before selection; fertility-family fields are absent above 10.</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>fert_parents</code></td>
+<td>Mean observed fertility of recorded parents.</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>s_fert_parents</code></td>
+<td>1 if at least one linked parent is itself retained with <code>s_fert==1</code>; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td><code>parent1_id</code></td>
+<td>Identifier of parent 1; parent order is not sex-specific.</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td><code>parent1_fert</code></td>
+<td>Observed number of linked children of parent 1.</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td><code>parent1_male</code></td>
+<td>Male indicator for parent 1; parent order is not sex-specific.</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td><code>parent1_first_child_age</code></td>
+<td>Age of parent 1 at birth of first linked child.</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td><code>parent1_last_child_age</code></td>
+<td>Age of parent 1 at birth of last linked child.</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td><code>parent1_death_age</code></td>
+<td>Age at death of parent 1, in years.</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td><code>parent1_distance</code></td>
+<td>Great-circle distance in kilometres between parent 1 birth and death locations.</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td><code>parent1_birth_y</code></td>
+<td>Year of parent 1 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td><code>parent1_birth_date</code></td>
+<td>Stata monthly date of parent 1 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td><code>parent1_birth_id</code></td>
+<td>Mapped LAU/place identifier for parent 1 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><code>parent1_birth_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for parent 1 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>parent1_birth_COUNTRY</code></td>
+<td>String country name for parent 1 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>parent1_first_child_y</code></td>
+<td>Year of parent 1 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td><code>parent1_first_child_date</code></td>
+<td>Stata monthly date of parent 1 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">31</td>
+<td><code>parent1_first_child_id</code></td>
+<td>Mapped LAU/place identifier for parent 1 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">32</td>
+<td><code>parent1_first_child_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for parent 1 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">33</td>
+<td><code>parent1_first_child_COUNTRY</code></td>
+<td>String country name for parent 1 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">34</td>
+<td><code>parent1_death_y</code></td>
+<td>Year of parent 1 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">35</td>
+<td><code>parent1_death_date</code></td>
+<td>Stata monthly date of parent 1 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">36</td>
+<td><code>parent1_death_id</code></td>
+<td>Mapped LAU/place identifier for parent 1 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">37</td>
+<td><code>parent1_death_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for parent 1 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">38</td>
+<td><code>parent1_death_COUNTRY</code></td>
+<td>String country name for parent 1 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">39</td>
+<td><code>parent2_id</code></td>
+<td>Identifier of parent 2; parent order is not sex-specific.</td>
+</tr>
+<tr>
+<td style="text-align: right;">40</td>
+<td><code>parent2_fert</code></td>
+<td>Observed number of linked children of parent 2.</td>
+</tr>
+<tr>
+<td style="text-align: right;">41</td>
+<td><code>parent2_male</code></td>
+<td>Male indicator for parent 2; parent order is not sex-specific.</td>
+</tr>
+<tr>
+<td style="text-align: right;">42</td>
+<td><code>parent2_first_child_age</code></td>
+<td>Age of parent 2 at birth of first linked child.</td>
+</tr>
+<tr>
+<td style="text-align: right;">43</td>
+<td><code>parent2_last_child_age</code></td>
+<td>Age of parent 2 at birth of last linked child.</td>
+</tr>
+<tr>
+<td style="text-align: right;">44</td>
+<td><code>parent2_death_age</code></td>
+<td>Age at death of parent 2, in years.</td>
+</tr>
+<tr>
+<td style="text-align: right;">45</td>
+<td><code>parent2_distance</code></td>
+<td>Great-circle distance in kilometres between parent 2 birth and death locations.</td>
+</tr>
+<tr>
+<td style="text-align: right;">46</td>
+<td><code>parent2_birth_y</code></td>
+<td>Year of parent 2 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">47</td>
+<td><code>parent2_birth_date</code></td>
+<td>Stata monthly date of parent 2 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">48</td>
+<td><code>parent2_birth_id</code></td>
+<td>Mapped LAU/place identifier for parent 2 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">49</td>
+<td><code>parent2_birth_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for parent 2 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">50</td>
+<td><code>parent2_birth_COUNTRY</code></td>
+<td>String country name for parent 2 birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">51</td>
+<td><code>parent2_first_child_y</code></td>
+<td>Year of parent 2 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">52</td>
+<td><code>parent2_first_child_date</code></td>
+<td>Stata monthly date of parent 2 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">53</td>
+<td><code>parent2_first_child_id</code></td>
+<td>Mapped LAU/place identifier for parent 2 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">54</td>
+<td><code>parent2_first_child_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for parent 2 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">55</td>
+<td><code>parent2_first_child_COUNTRY</code></td>
+<td>String country name for parent 2 first linked child's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">56</td>
+<td><code>parent2_death_y</code></td>
+<td>Year of parent 2 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">57</td>
+<td><code>parent2_death_date</code></td>
+<td>Stata monthly date of parent 2 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">58</td>
+<td><code>parent2_death_id</code></td>
+<td>Mapped LAU/place identifier for parent 2 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">59</td>
+<td><code>parent2_death_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for parent 2 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">60</td>
+<td><code>parent2_death_COUNTRY</code></td>
+<td>String country name for parent 2 death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">61</td>
+<td><code>birth_y</code></td>
+<td>Reported birth year, with baptism year substituted when birth year is missing.</td>
+</tr>
+<tr>
+<td style="text-align: right;">62</td>
+<td><code>birth_m</code></td>
+<td>Reported birth month, with baptism month substituted when birth month is missing; may remain missing or invalid.</td>
+</tr>
+<tr>
+<td style="text-align: right;">63</td>
+<td><code>birth_date</code></td>
+<td>Stata monthly date constructed before baptism fallback; January is used when the original birth month is missing or invalid, and the value can disagree with <code>birth_y</code> or <code>birth_m</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">64</td>
+<td><code>birth_id</code></td>
+<td>2018 LAU identifier in Europe or source coordinate-key identifier in the United States/Canada for the birth place.</td>
+</tr>
+<tr>
+<td style="text-align: right;">65</td>
+<td><code>birth_dep</code></td>
+<td>Dataset-specific value-labelled category for the birth-place NUTS 3, county, or census-division name; not an official code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">66</td>
+<td><code>birth_region</code></td>
+<td>Dataset-specific value-labelled category for the birth-place NUTS 2, state, or province name; not an official code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">67</td>
+<td><code>birth_country</code></td>
+<td>Dataset-specific numeric country category with value labels for the birth location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">68</td>
+<td><code>birth_COUNTRY</code></td>
+<td>String country name for individual's birth location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">69</td>
+<td><code>birth_group</code></td>
+<td>Broad European country-group name for individual's birth location; missing outside Europe.</td>
+</tr>
+<tr>
+<td style="text-align: right;">70</td>
+<td><code>birth_europe</code></td>
+<td>1 if individual's birth location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">71</td>
+<td><code>birth_america</code></td>
+<td>Birth-location indicator: 1=United States/Canada, 0=Europe, missing if unmapped.</td>
+</tr>
+<tr>
+<td style="text-align: right;">72</td>
+<td><code>birth_longitude</code></td>
+<td>Longitude of mapped birth place; a representative LAU point in Europe or matched source-coordinate point in the United States/Canada.</td>
+</tr>
+<tr>
+<td style="text-align: right;">73</td>
+<td><code>birth_latitude</code></td>
+<td>Latitude of mapped birth place; a representative LAU point in Europe or matched source-coordinate point in the United States/Canada.</td>
+</tr>
+<tr>
+<td style="text-align: right;">74</td>
+<td><code>birth_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for individual's birth.</td>
+</tr>
+<tr>
+<td style="text-align: right;">75</td>
+<td><code>birth_weight</code></td>
+<td>1820 European population in thousands divided by the country's birth-record count in <code>[1675,1900)</code>; generally missing outside Europe.</td>
+</tr>
+<tr>
+<td style="text-align: right;">76</td>
+<td><code>birth_urban</code></td>
+<td>Urban status of the mapped birth place at the latest benchmark at or before the individual's birth year; missing where urban data are not covered.</td>
+</tr>
+<tr>
+<td style="text-align: right;">77</td>
+<td><code>first_child_y</code></td>
+<td>Minimum nonmissing birth year among matched linked-child profiles.</td>
+</tr>
+<tr>
+<td style="text-align: right;">78</td>
+<td><code>first_child_m</code></td>
+<td>Minimum reported or fallback month among children in the earliest observed child-birth year; may be missing or invalid and need not match <code>first_child_date</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">79</td>
+<td><code>first_child_date</code></td>
+<td>Minimum available Stata monthly birth date among matched linked-child profiles; it can refer to a different child from <code>first_child_y</code> or <code>first_child_m</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">80</td>
+<td><code>first_child_age</code></td>
+<td>Age at birth of first linked child, in years.</td>
+</tr>
+<tr>
+<td style="text-align: right;">81</td>
+<td><code>first_child_id</code></td>
+<td>2018 LAU identifier in Europe or source coordinate-key identifier in the United States/Canada for the mapped first-child place; a fallback may use the earliest dated child with a location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">82</td>
+<td><code>first_child_dep</code></td>
+<td>Dataset-specific value-labelled category for the first-child-place NUTS 3, county, or census-division name; not an official code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">83</td>
+<td><code>first_child_region</code></td>
+<td>Dataset-specific value-labelled category for the first-child-place NUTS 2, state, or province name; not an official code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">84</td>
+<td><code>first_child_country</code></td>
+<td>Dataset-specific numeric country category with value labels for the first-child location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">85</td>
+<td><code>first_child_COUNTRY</code></td>
+<td>String country name for birth of first linked child location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">86</td>
+<td><code>first_child_group</code></td>
+<td>Broad European country-group name for birth of first linked child location; missing outside Europe.</td>
+</tr>
+<tr>
+<td style="text-align: right;">87</td>
+<td><code>first_child_europe</code></td>
+<td>1 if birth of first linked child location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">88</td>
+<td><code>first_child_america</code></td>
+<td>First-child-location indicator: 1=United States/Canada, 0=Europe, missing if unmapped.</td>
+</tr>
+<tr>
+<td style="text-align: right;">89</td>
+<td><code>first_child_longitude</code></td>
+<td>Longitude of mapped first-child place; a representative LAU point in Europe or matched source-coordinate point in the United States/Canada.</td>
+</tr>
+<tr>
+<td style="text-align: right;">90</td>
+<td><code>first_child_latitude</code></td>
+<td>Latitude of mapped first-child place; a representative LAU point in Europe or matched source-coordinate point in the United States/Canada.</td>
+</tr>
+<tr>
+<td style="text-align: right;">91</td>
+<td><code>first_child_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for birth of first linked child.</td>
+</tr>
+<tr>
+<td style="text-align: right;">92</td>
+<td><code>first_child_weight</code></td>
+<td>1820 European population in thousands divided by the country's first-child-record count in <code>[1700,1925)</code>; generally missing outside Europe.</td>
+</tr>
+<tr>
+<td style="text-align: right;">93</td>
+<td><code>first_child_urban</code></td>
+<td>Urban status of the mapped first-child place at the latest benchmark at or before the parent's birth year; missing where urban data are not covered.</td>
+</tr>
+<tr>
+<td style="text-align: right;">94</td>
+<td><code>last_child_y</code></td>
+<td>Maximum nonmissing birth year among matched linked-child profiles.</td>
+</tr>
+<tr>
+<td style="text-align: right;">95</td>
+<td><code>last_child_m</code></td>
+<td>Minimum reported or fallback month among children in the latest observed child-birth year; may be missing or invalid and need not match <code>last_child_date</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">96</td>
+<td><code>last_child_date</code></td>
+<td>Maximum available Stata monthly birth date among matched linked-child profiles; it can refer to a different child from <code>last_child_y</code> or <code>last_child_m</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">97</td>
+<td><code>last_child_age</code></td>
+<td>Age at birth of last linked child, in years.</td>
+</tr>
+<tr>
+<td style="text-align: right;">98</td>
+<td><code>death_y</code></td>
+<td>Reported death year, with burial year substituted when death year is missing.</td>
+</tr>
+<tr>
+<td style="text-align: right;">99</td>
+<td><code>death_m</code></td>
+<td>Reported death month, with burial month substituted when death month is missing; may remain missing or invalid.</td>
+</tr>
+<tr>
+<td style="text-align: right;">100</td>
+<td><code>death_date</code></td>
+<td>Stata monthly date constructed before burial fallback; January is used when the original death month is missing or invalid, and the value can disagree with <code>death_y</code> or <code>death_m</code>.</td>
+</tr>
+<tr>
+<td style="text-align: right;">101</td>
+<td><code>death_id</code></td>
+<td>2018 LAU identifier in Europe or source coordinate-key identifier in the United States/Canada for the death place.</td>
+</tr>
+<tr>
+<td style="text-align: right;">102</td>
+<td><code>death_dep</code></td>
+<td>Dataset-specific value-labelled category for the death-place NUTS 3, county, or census-division name; not an official code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">103</td>
+<td><code>death_region</code></td>
+<td>Dataset-specific value-labelled category for the death-place NUTS 2, state, or province name; not an official code.</td>
+</tr>
+<tr>
+<td style="text-align: right;">104</td>
+<td><code>death_country</code></td>
+<td>Dataset-specific numeric country category with value labels for the death location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">105</td>
+<td><code>death_COUNTRY</code></td>
+<td>String country name for individual's death location.</td>
+</tr>
+<tr>
+<td style="text-align: right;">106</td>
+<td><code>death_group</code></td>
+<td>Broad European country-group name for individual's death location; missing outside Europe.</td>
+</tr>
+<tr>
+<td style="text-align: right;">107</td>
+<td><code>death_europe</code></td>
+<td>1 if individual's death location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">108</td>
+<td><code>death_america</code></td>
+<td>Death-location indicator: 1=United States/Canada, 0=Europe, missing if unmapped.</td>
+</tr>
+<tr>
+<td style="text-align: right;">109</td>
+<td><code>death_longitude</code></td>
+<td>Longitude of mapped death place; a representative LAU point in Europe or matched source-coordinate point in the United States/Canada.</td>
+</tr>
+<tr>
+<td style="text-align: right;">110</td>
+<td><code>death_latitude</code></td>
+<td>Latitude of mapped death place; a representative LAU point in Europe or matched source-coordinate point in the United States/Canada.</td>
+</tr>
+<tr>
+<td style="text-align: right;">111</td>
+<td><code>death_latlon_ID</code></td>
+<td>Raw FamiLinx latitude-longitude key for individual's death.</td>
+</tr>
+<tr>
+<td style="text-align: right;">112</td>
+<td><code>death_weight</code></td>
+<td>1820 European population in thousands divided by the country's death-record count in <code>[1750,1975)</code>; generally missing outside Europe.</td>
+</tr>
+<tr>
+<td style="text-align: right;">113</td>
+<td><code>death_urban</code></td>
+<td>Urban status of the mapped death place at the latest benchmark at or before the individual's birth year; missing where urban data are not covered.</td>
+</tr>
+<tr>
+<td style="text-align: right;">114</td>
+<td><code>parent1_birth_europe</code></td>
+<td>1 if parent 1 birth location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">115</td>
+<td><code>parent1_first_child_europe</code></td>
+<td>1 if parent 1 first linked child's birth location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">116</td>
+<td><code>parent1_death_europe</code></td>
+<td>1 if parent 1 death location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">117</td>
+<td><code>parent2_birth_europe</code></td>
+<td>1 if parent 2 birth location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">118</td>
+<td><code>parent2_first_child_europe</code></td>
+<td>1 if parent 2 first linked child's birth location maps to Europe; missing otherwise.</td>
+</tr>
+<tr>
+<td style="text-align: right;">119</td>
+<td><code>parent2_death_europe</code></td>
+<td>1 if parent 2 death location maps to Europe; missing otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h2>Citation</h2>
+<ul>
+<li>Blanc, Guillaume. 2024. “Demographic transitions, rural flight, and intergenerational persistence: evidence from crowdsourced genealogies.” Manuscript dated April 10, 2024.</li>
+<li>Kaplanis, Joanna, et al. 2018. “Quantitative Analysis of Population-Scale Family Trees With Millions of Relatives.” <em>Science</em> 360(6385): 171-175.</li>
+</ul>
+<h2>License and Reuse</h2>
+<p>No explicit data-license file accompanies this release. Users remain responsible for the terms attached to the upstream sources. Questions about redistribution or other uses requiring a license determination may be directed to Guillaume Blanc at <code>guillaume.blanc@manchester.ac.uk</code>.</p>
+</article>
+<!-- StatCounter — same project as guillaumeblanc.com, invisible mode -->
+<script>var sc_project=12397869,sc_invisible=1,sc_security="9429439c";</script>
+<script src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noopener"><img class="statcounter" src="https://c.statcounter.com/12397869/0/9429439c/1/" alt="Web Analytics" referrerpolicy="no-referrer-when-downgrade"></a></div></noscript>
+</body>
+</html>
